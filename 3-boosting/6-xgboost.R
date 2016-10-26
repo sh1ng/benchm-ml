@@ -29,8 +29,8 @@ rm(X_train, d_train)
 system.time({
 n_proc <- detectCores()
 md <- xgb.train(data = dxgb_train, nthread = n_proc, 
-                 objective = "binary:logistic", nround = 1000, 
-                 max_depth = 10, eta = 0.01, subsample = 1.0,
+                 objective = "binary:logistic", nround = 100, 
+                 max_depth = 10, eta = 0.1, subsample = 1.0,
                  min_child_weight = 10)
 })
 
