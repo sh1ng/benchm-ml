@@ -30,8 +30,8 @@ system.time({
 n_proc <- detectCores()
 md <- xgb.train(data = dxgb_train, nthread = n_proc, 
                  objective = "binary:logistic", nround = 1000, 
-                 max_depth = 16, eta = 0.01, subsample = 0.5,
-                 min_child_weight = 1)
+                 max_depth = 10, eta = 0.01, subsample = 1.0,
+                 min_child_weight = 10)
 })
 
 
